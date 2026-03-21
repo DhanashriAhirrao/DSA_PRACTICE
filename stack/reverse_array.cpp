@@ -1,4 +1,5 @@
 // with T.C. O(n)
+// Q.35 (leetcode)
 vector<char> s; //hello
 stack<char>st;
 for(int i=0;i<s.size();i++){
