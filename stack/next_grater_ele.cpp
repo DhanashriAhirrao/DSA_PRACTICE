@@ -1,3 +1,5 @@
+// leetcode Q.503
+
 vector<int> nextGreaterElements(vector<int>& nums) {
         int n=nums.size();
         vector<int>v(n,-1);
