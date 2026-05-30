@@ -1,0 +1,11 @@
+1. API -> Application Programming Interfase
+2. if i have a browser which understand cpp and a server which understand javascript now they have too exchange information but both use different language at such time our API works
+3. so every server have its API (a set of rule for how two app communicate) which they give
+4. so basically  API lets two different software applications talk to each other in a structured way.
+5. JSON - JavaScript Object Notation --> most API talks in JSON
+
+==========================================
+
+1. IP address -> Internet Protocol --> its basically your device's address on internet so they can deliver a content 
+2. When you open Google, your request travels across the internet. Without an IP address, the response wouldn't know where to come back to.
+3. so basically when you search something your device ask for IP from "DNS server" 
