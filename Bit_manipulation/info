@@ -1,0 +1,52 @@
+// >> right shift
+e.g. 13>>
+13 = 1101
+so (1101) >> means 110'1' will be removes
+-> 0110 = 110 = 6
+// << left shift
+e.g.10<<
+10=00001010 
+so (1010) << means '1'010 will be removed
+-> 00010100 = 20 
+
+1. formula we use here x>>k -> x/(2^k) 
+13>>1 -> 13/(2^1) = 13/2 = 6.5 = '6' 
+  
+2. x<<k -> x*(2^k) = 10*(2^1) = '20'
+  
+
+// to store a negative number 
+0 represent even
+1 represent odd
+
+// to store -ve number (2's complement is used)
+e.g. -13
+ 1st write 13 : 0000 1101
+ 2nd write 1's complement : 1111 0010
+ 3rd now add 1 into it :     +      1
+                        =  '1'111 0011
+this 1 at end represent its a -ve number 
+
+// not operator 
+e.g. ~(5)
+
+  5= 0000 0101
+  directly apply ~ step 
+  1st flip -> '1'111 1010
+  as last bit is '1' its a negative number 
+  for -ve number lets do 2's compliment 
+  i) flip it except the sign number  -> 1000 0101
+  ii) add 1 in it  
+   ans = 1000 0110
+  here also the 1 which we dont change is to represent -ve not to count 
+ans is (-6)
+
+e.g. ~(-6)
+  -6 = 0000 0110
+  1's compliment = 1111 1001
+  now add 1 =      +       1
+           ans =   1111 1010
+   now apply ~ step
+  1st flip : '0'000 0101
+  but last bit is 0 so we stop here if it was '1' like last example solve further 
+ final ans : 5
