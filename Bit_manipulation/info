@@ -50,3 +50,44 @@ e.g. ~(-6)
   1st flip : '0'000 0101
   but last bit is 0 so we stop here if it was '1' like last example solve further 
  final ans : 5
+
+
+---------------------------------------------------------------------
+
+(same number) ^ (same number) = 0
+
+//Q.1 swap the number not using extra space
+a=a^b;
+b=a^b; -> b=(a^b)^b -> b=a^b^b -> b=a^0 -> b=a
+a=a^b; -> a=a^(a^b) -> a=a^a^b -> a=0^b -> a=b
+so we swap the number 
+
+//Q.2 check if 'i' th bit is set or not
+//if digit is 0 then not set if digit is 1 its set 
+int n=13 -> 1101
+int i=2
+// brute force
+(indexing start from rhs from zero index)
+string str='1101'
+rev(str);//1011 
+if s[i]=='1' cout<<'set'
+else cout<<'false'
+
+//optimal -> using right shift operator
+n=13 
+i=2
+13 >> i
+1101>>2 --> 11
+last digit is '1' so its set
+
+//Q.3 clear the 'i' th bit 
+//means if i bit is not zero then make it zero
+ans:
+number & ~(1<<2)
+
+e.g. num=13 ->1101
+i=2
+so make 2nd bit =0 ->1001 =9
+1101 & ~(0001<<2) --> 1101 & ~(0100) --> 1101 & 1011 = 1001 = 9
+
+//Q.4 
