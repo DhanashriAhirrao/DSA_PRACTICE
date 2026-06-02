@@ -7,10 +7,7 @@ int missingNumber(vector<int>& nums) {
         for(int i=0;i<n;i++){
             sum+=nums[i];
         }
-        int sum1=0;
-        for(int i=1;i<=n;i++){
-            sum1+=i;
-        }
+        int sum1=(n+1)*(n+2)/2;
         int ans= (sum1-sum);
         return ans;
 
