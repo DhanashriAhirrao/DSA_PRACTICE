@@ -1,5 +1,4 @@
-//leetcode Q.485
-// same question in bit manipulation 
+//leetcode Q.485 
 int findMaxConsecutiveOnes(vector<int>& nums) {
         int cnt=0;
         int mx=0;
