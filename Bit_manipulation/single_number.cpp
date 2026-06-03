@@ -21,4 +21,16 @@ for(int i=0;i<n;i++){
 }
 }
 
+
 //better -> hashing
+unorderded_map<int,int>mp;
+//calculating element frequency
+for(int i=0;i<n;i++){
+    mp[nums[i]]++;    
+}
+//iterating through freuqency map
+for(auto i:mp){
+        if(i.second==1){
+                cout<<"number that appear once : "<<i.second;
+        }
+}
