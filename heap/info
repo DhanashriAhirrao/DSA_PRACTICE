@@ -1,0 +1,8 @@
+1. heap is a complete binary tree.
+  i) there will be all levels completely filled except the last level 
+  ii)  at last level all  nodes  should be filled from left side
+2. two types of heap 
+   a) max heap -> parent node should be greater than or equal to a child node -> starting element here will be always greatest among all 
+   b) min heap  -> parent node should be less than or equal to a child node
+   
+  
