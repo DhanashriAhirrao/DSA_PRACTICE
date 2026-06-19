@@ -6,3 +6,8 @@
    b) min heap  -> parent node should be less than or equal to a child node
    
   
+--------------------------------------------
+using_array.cpp
+i)  children node -> parent node ==> (2*i)+1 for left and (2*i)+2 for left
+when we want to insert we folloe step-up (from child node -> parent node)
+but when we follow deletion we always delete the first node first for that we follow step-down (from parent node -> child node)
