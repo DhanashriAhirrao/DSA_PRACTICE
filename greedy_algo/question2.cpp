@@ -17,3 +17,24 @@ class Solution {
     }
 };
 
+//leetcode : assign cookies
+class Solution {
+public:
+    int findContentChildren(vector<int>& g, vector<int>& s) {
+        int n=g.size();
+        int a=s.size();
+        sort(g.begin(),g.end());
+        sort(s.begin(),s.end());
+        int cnt=0;
+        int j=0;
+        int i=0;
+        while(i<a && j<n){
+            if(s[i]>=g[j]){
+                cnt++;
+                j++;
+            }
+            i++;
+        }
+        return cnt;
+    }
+};
