@@ -87,3 +87,9 @@ public:
         return BST(preorder,idx,INT_MIN,INT_MAX);
     }
 };
+
+
+//Q.5) on leetcode solved go there 
+// leetcode : 1305 : ALL elements in binary serch tree
+// basically we are sorting elements in ascending order from both BST together 
+
