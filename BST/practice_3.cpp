@@ -20,3 +20,32 @@ class Solution {
     }
 };
 
+
+//Q.2) gfg (BST with dead end)
+class Solution {
+  public:
+  
+    bool DeadEnd(Node* root,int lower,int upper){
+        if(!root){
+            return 0;
+        }
+        if(!root->left && !root->right){
+            if(root->data-lower==1 && upper-root->data==1){
+                return 1;
+            }
+            else{
+                return 0;
+            }
+        }
+        return DeadEnd(root->left,lower,root->data) || DeadEnd(root->right,root->data,upper);
+    }
+    bool isDeadEnd(Node *root) {
+        // Code here
+        int lower=0;
+        int upper=INT_MAX;
+        return DeadEnd(root,lower,upper);
+    }
+};
+
+
+//
