@@ -48,3 +48,72 @@ public:
         return reverse(head,NULL);
     }
 };
+
+
+//Q.2) leetcode (876)
+class Solution {
+public:
+    ListNode* middleNode(ListNode* head) {
+        //way 1 TC = O(N) , SC=O(1)
+
+        /* 
+        ListNode* temp=head;
+        int cnt=0;
+        while(temp){
+            cnt+=1;
+            temp=temp->next;
+        }
+        cnt/=2;
+        temp=head;
+        while(cnt){
+            temp=temp->next;
+            cnt--;
+        }
+        return temp;
+        */
+
+        //way 2 -> much faster
+
+        ListNode* slow=head;
+        ListNode* fast=head;
+        while(fast!=NULL && fast->next!=NULL){
+            slow=slow->next;
+            fast=fast->next->next;
+        }
+        return slow;
+    }
+};
+
+//Q.3) leetcode (61)
+class Solution {
+public:
+    ListNode* rotateRight(ListNode* head, int k) {
+        if(head==NULL || head->next==NULL){
+            return head;
+        }
+        ListNode* temp=head;
+        int cnt=0;
+        while(temp!=NULL){
+            cnt+=1;
+            temp=temp->next;
+        }
+        k%=cnt;
+        if(k==0){
+            return head;
+        }
+        int step=cnt-k;
+        temp=head;
+        ListNode* nxt=NULL;
+        while(step--){
+            nxt=temp;
+            temp=temp->next;
+        }
+        nxt->next=NULL;
+        ListNode* prev=temp;
+        while(temp->next!=NULL){
+            temp=temp->next;
+        }
+        temp->next=head;
+        return prev;
+    }
+};
