@@ -1,16 +1,40 @@
-# entering element in null
+#include <iostream>
+using namespace std;
+class Node{
+    public:
+    int data;
+    Node* next;
 
-node *newnode =new node(30) #created 1st node  
-head=new node
-tail=new node
-node *newnode=new node(30) #new element connected
-tail=new node
+    Node(int val){
+        data=val;
+        next=NULL;
+    }
+};
 
-#enter new element and make it head
-node *newnode=new node(30) #1st element
-head=new node
-tail=new node
-node *newnode=new node(40) #second entered element and make it start/head
-new node->next=head
-head=new node  
-  
+int main() 
+{
+    Node* head=NULL;
+    Node* tail=NULL;
+    int arr[]={1,2,3,4,5};
+    for(int i=0;i<5;i++){
+        if(head==NULL){
+            head=new Node(arr[i]);
+            tail=head;
+        }
+        //inserting element at start
+        else{
+            tail->next=new Node(arr[i]);
+            tail=tail->next;
+        }
+    }
+    //adding element at end 
+    tail->next=new Node(6);
+    tail=tail->next;
+    //printing elemnet 
+    Node* curr=head;
+    while(curr){
+        cout<<curr->data<<" ";
+        curr=curr->next;
+    }
+    
+}
